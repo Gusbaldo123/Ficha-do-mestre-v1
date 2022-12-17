@@ -1,0 +1,419 @@
+﻿{"MaterialList":[
+	{
+		"itemName":"Wooden Dagger",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":0},
+			{"percentageGain":0.1,
+			"itemStatus":6}],
+		"itemSlot": 5,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Pointy Stick",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.05,
+			"itemStatus":0}],
+		"itemSlot": 5,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Bronze Dagger",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.35,
+			"itemStatus":0},
+			{"percentageGain":0.15,
+			"itemStatus":6}],
+		"itemSlot": 5,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Wooden Sword",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":0},
+			{"percentageGain":0.1,
+			"itemStatus":5}],
+		"itemSlot": 6,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Bronze Sword",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.35,
+			"itemStatus":0},
+			{"percentageGain":0.15,
+			"itemStatus":5}],
+		"itemSlot": 6,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Wooden Sling",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":1},
+			{"percentageGain":0.1,
+			"itemStatus":2}],
+		"itemSlot": 6,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Bronze Sling",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.35,
+			"itemStatus":1},
+			{"percentageGain":0.15,
+			"itemStatus":2}],
+		"itemSlot": 6,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Alabasta Necklace",
+		"itemEffect":{"isEffectPassive":true, "effectCost":"", "effectName":"Anti-Mana", "effectText": "Contra-atacar uma fonte mágica faz com que você tenha +15 de dano, caso perca no contra-ataque, a fonte de dano tem -15 de dano( min 1 )"},
+		"statuses":[
+			{"percentageGain":0.2,
+			"itemStatus":2}],
+		"itemSlot": 4,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Topaz Earring",
+		"itemEffect":{"isEffectPassive":true, "effectCost":"", "effectName":"Canalização amarela", "effectText": "Antes de iniciar a luta, fique ao sol por um time skip, você e um aliado a escolha começarão com +5 no menor status"},
+		"statuses":[
+			{"percentageGain":0.4,
+			"itemStatus":2}],
+		"itemSlot": 4,
+		"itemQuality": 1
+	},
+	{
+		"itemName":"Saphire Ring",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.2,
+			"itemStatus":3}],
+		"itemSlot": 4,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Magma Ruby Necklace",
+		"itemEffect":{"isEffectPassive":true, "effectCost":"", "effectName":"Morte quente", "effectText": "Ao causar dano a alguém, incendeie o alvo, 5 de dano por 3 turnos"},
+		"statuses":[
+			{"percentageGain":0.4,
+			"itemStatus":3}],
+		"itemSlot": 4,
+		"itemQuality": 1
+	},
+	{
+		"itemName":"Hematite belt",
+		"itemEffect":{"isEffectPassive":true, "effectCost":"", "effectName":"Primeiro dano", "effectText": "Arm gera 6 de shield ao invés de 5"},
+		"statuses":[],
+		"itemSlot": 4,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Old Scroll",
+		"itemEffect":{"isEffectPassive":true, "effectCost":"", "effectName":"Primeiro acerto", "effectText": "Seu primeiro dano da batalha causa 5 de dano extra"},
+		"statuses":[
+			{"percentageGain":0.1,
+			"itemStatus":3}],
+		"itemSlot": 6,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Rusted Bronze Ring",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":2},
+			{"percentageGain":0.1,
+			"itemStatus":3}],
+		"itemSlot": 6,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Rusted Aluminum Ring",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.35,
+			"itemStatus":2},
+			{"percentageGain":0.2,
+			"itemStatus":3}],
+		"itemSlot": 6,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Bronze Ring",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"5 Mp", "effectName":"Escudo de cobre", "effectText": "O primeiro turno você tem 5 de shield extra"},
+		"statuses":[
+			{"percentageGain":0.4,
+			"itemStatus":2},
+			{"percentageGain":0.15,
+			"itemStatus":3}],
+		"itemSlot": 6,
+		"itemQuality": 1
+	},
+	{
+		"itemName":"Aluminum Ring",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.6,
+			"itemStatus":2},
+			{"percentageGain":0.25,
+			"itemStatus":3}],
+		"itemSlot": 5,
+		"itemQuality": 1
+	},
+	{
+		"itemName":"Bronze Gauntlet",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":4},
+			{"percentageGain":0.1,
+			"itemStatus":5}],
+		"itemSlot": 6,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Addicted Dice",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":6},
+			{"percentageGain":0.1,
+			"itemStatus":2}],
+		"itemSlot": 6,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Wooden Hammer",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":0},
+			{"percentageGain":0.1,
+			"itemStatus":5}],
+		"itemSlot": 6,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Wooden Arrow",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":1}],
+		"itemSlot": 4,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Bronze Arrow",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.45,
+			"itemStatus":1}],
+		"itemSlot": 4,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Pebbles",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.05,
+			"itemStatus":1}],
+		"itemSlot": 4,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Wooden Hammer",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":0},
+			{"percentageGain":0.1,
+			"itemStatus":4}],
+		"itemSlot": 6,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Bronze Helmet",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":4},
+			{"percentageGain":0.1,
+			"itemStatus":5}],
+		"itemSlot": 0,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Bucket",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.4,
+			"itemStatus":4}],
+		"itemSlot": 0,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Aluminum Chainmail",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.4,
+			"itemStatus":5},
+			{"percentageGain":0.1,
+			"itemStatus":4}],
+		"itemSlot": 1,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Harpy wing cape",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"25mp+5hp por turno ativa", "effectName":"Voo", "effectText":"Pague este custo para voar, enquanto voar, ataques corpo-a-corpo não podem lhe alvejar, e ataques a distância rollam d10>5 para acertar"},
+		"statuses":[
+			{"percentageGain":-0.3,
+			"itemStatus":0},
+			{"percentageGain":0.35,
+			"itemStatus":1}],
+		"itemSlot": 1,
+		"itemQuality": 2
+	},
+	{
+		"itemName":"Rogue Hat",
+		"itemEffect":{"isEffectPassive":true, "effectCost":"", "effectName":"Olhos do ladino", "effectText": "Se nos últimos 3 turnos você não recebeu dano. Seu primeiro dano do turno causa 8 de dano. Set bônus(4 peças): Os itens do Set não dependem mais de quantos turnos ficou sem receber dano"},
+		"statuses":[
+			{"percentageGain":-0.07,
+			"itemStatus":0},
+			{"percentageGain":0.2,
+			"itemStatus":5},
+			{"percentageGain":0.15,
+			"itemStatus":1}],
+		"itemSlot": 0,
+		"itemQuality": 1
+	},
+	{
+		"itemName":"Rogue Chestplate",
+		"itemEffect":{"isEffectPassive":true, "effectCost":"", "effectName":"Arremesso do ladino", "effectText": "Se nos últimos 2 turnos você não recebeu dano. Você causa 2 de dano em alguém, este dano não lhe revela. Set bônus(4 peças): Os itens do Set não dependem mais de quantos turnos ficou sem receber dano"},
+		"statuses":[
+			{"percentageGain":-0.1,
+			"itemStatus":0},
+			{"percentageGain":0.255,
+			"itemStatus":5},
+			{"percentageGain":0.1,
+			"itemStatus":1}],
+		"itemSlot": 1,
+		"itemQuality": 1
+	},	
+	{
+		"itemName":"Rogue Leggings",
+		"itemEffect":{"isEffectPassive":true, "effectCost":"", "effectName":"Defesa do ladino", "effectText": "Se nos últimos 2 turnos você não recebeu dano. O primeiro dano do turno que receber você mitiga 5 de dano. Set bônus(4 peças): Os itens do Set não dependem mais de quantos turnos ficou sem receber dano"},
+		"statuses":[
+			{"percentageGain":-0.07,
+			"itemStatus":0},
+			{"percentageGain":0.2,
+			"itemStatus":5},
+			{"percentageGain":0.1,
+			"itemStatus":1}],
+		"itemSlot": 2,
+		"itemQuality": 1
+	},
+	{
+		"itemName":"Rogue Boots",
+		"itemEffect":{"isEffectPassive":true, "effectCost":"", "effectName":"Velocidade do ladino", "effectText": "Se no último turno você não recebeu dano. Você ganha +5 em qualquer teste de Destreza. Set bônus(4 peças): Os itens do Set não dependem mais de quantos turnos ficou sem receber dano"},
+		"statuses":[
+			{"percentageGain":-0.05,
+			"itemStatus":0},
+			{"percentageGain":0.3,
+			"itemStatus":5},
+			{"percentageGain":0.1,
+			"itemStatus":1}],
+		"itemSlot": 3,
+		"itemQuality": 1
+	},
+	{
+		"itemName":"Bronze Chainmail",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.4,
+			"itemStatus":4},
+			{"percentageGain":0.1,
+			"itemStatus":5}],
+		"itemSlot": 1,
+		"itemQuality": 0
+	},
+	{
+		"itemName":"Wooden Bow",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":1},
+			{"percentageGain":0.2,
+			"itemStatus":2},
+			{"percentageGain":0.1,
+			"itemStatus":3}],
+		"itemSlot": 6,
+		"itemQuality": 1
+	},
+	{
+		"itemName":"Bronze Bow",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.4,
+			"itemStatus":1},
+			{"percentageGain":0.25,
+			"itemStatus":2},
+			{"percentageGain":0.15,
+			"itemStatus":3}],
+		"itemSlot": 6,
+		"itemQuality": 1
+	},
+	{
+		"itemName":"Wooden Shield",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":4},
+			{"percentageGain":0.1,
+			"itemStatus":5}],
+		"itemSlot": 5,
+		"itemQuality":0
+	},
+	{
+		"itemName":"Bronze Shield",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.35,
+			"itemStatus":4},
+			{"percentageGain":0.15,
+			"itemStatus":5}],
+		"itemSlot": 5,
+		"itemQuality":0
+	},
+	{
+		"itemName":"Wooden Club",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.5,
+			"itemStatus":0},
+			{"percentageGain":0.1,
+			"itemStatus":5}],
+		"itemSlot": 6,
+		"itemQuality": 1
+	},
+	{
+		"itemName":"Wooden Staff",
+		"itemEffect":{"isEffectPassive":false, "effectCost":"", "effectName":"", "effectText": ""},
+		"statuses":[
+			{"percentageGain":0.3,
+			"itemStatus":0},
+			{"percentageGain":0.1,
+			"itemStatus":1}],
+		"itemSlot": 6,
+		"itemQuality":0
+	}
+]}
