@@ -69,6 +69,8 @@
             this.ch_Collar = new System.Windows.Forms.CheckBox();
             this.ch_HandSingle = new System.Windows.Forms.CheckBox();
             this.ch_HandDual = new System.Windows.Forms.CheckBox();
+            this.lb_SelectItem = new System.Windows.Forms.ListBox();
+            this.lbl_ItemQnty = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bt_Head)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_Torso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_HandSingle)).BeginInit();
@@ -129,6 +131,7 @@
             this.txt_PlayerLvl.Name = "txt_PlayerLvl";
             this.txt_PlayerLvl.Size = new System.Drawing.Size(104, 20);
             this.txt_PlayerLvl.TabIndex = 12;
+            this.txt_PlayerLvl.TextChanged += new System.EventHandler(this.txt_PlayerLvl_TextChanged);
             // 
             // chb_Str
             // 
@@ -491,11 +494,31 @@
             this.ch_HandDual.TabIndex = 41;
             this.ch_HandDual.UseVisualStyleBackColor = true;
             // 
+            // lb_SelectItem
+            // 
+            this.lb_SelectItem.FormattingEnabled = true;
+            this.lb_SelectItem.Location = new System.Drawing.Point(325, 24);
+            this.lb_SelectItem.Name = "lb_SelectItem";
+            this.lb_SelectItem.Size = new System.Drawing.Size(134, 212);
+            this.lb_SelectItem.TabIndex = 42;
+            this.lb_SelectItem.SelectedIndexChanged += new System.EventHandler(this.lb_SelectItem_SelectedIndexChanged);
+            // 
+            // lbl_ItemQnty
+            // 
+            this.lbl_ItemQnty.AutoSize = true;
+            this.lbl_ItemQnty.Location = new System.Drawing.Point(322, 9);
+            this.lbl_ItemQnty.Name = "lbl_ItemQnty";
+            this.lbl_ItemQnty.Size = new System.Drawing.Size(93, 13);
+            this.lbl_ItemQnty.TabIndex = 43;
+            this.lbl_ItemQnty.Text = "Qualidade do Item";
+            // 
             // ItemGen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 347);
+            this.Controls.Add(this.lbl_ItemQnty);
+            this.Controls.Add(this.lb_SelectItem);
             this.Controls.Add(this.ch_HandDual);
             this.Controls.Add(this.ch_HandSingle);
             this.Controls.Add(this.ch_Collar);
@@ -586,5 +609,7 @@
         private System.Windows.Forms.CheckBox ch_HandDual;
         private System.Windows.Forms.Label lbl_Slot;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox lb_SelectItem;
+        private System.Windows.Forms.Label lbl_ItemQnty;
     }
 }

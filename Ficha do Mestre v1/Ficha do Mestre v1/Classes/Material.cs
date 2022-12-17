@@ -25,7 +25,7 @@ namespace Ficha_do_Mestre_v1.Informations
     }
     public class Material
     {
-        public Material(string t_itemName, bool t_isEffectPassive, string t_effectCost, string t_effectName, string t_itemEffect, List<Status> t_statuses,ItemSlot t_itemSlot, ItemQuality t_itemQuality)
+        public Material(string t_itemName, bool t_isEffectPassive, string t_effectCost, string t_effectName, string t_itemEffect, List<Status> t_statuses, ItemSlot t_itemSlot, ItemQuality t_itemQuality)
         {
             itemName = t_itemName;
             itemEffect = t_itemEffect;
@@ -50,13 +50,23 @@ namespace Ficha_do_Mestre_v1.Informations
             string jsonString = File.ReadAllText(@"../../Informations/MaterialList.json");
             dynamic JsonMaterials = JObject.Parse(jsonString);
 
-            foreach (var material in JsonMaterials.MaterialList)
+            InsertIntoList(JsonMaterials.Head, ItemSlot.Head);
+            InsertIntoList(JsonMaterials.Torso, ItemSlot.Torso);
+            InsertIntoList(JsonMaterials.Leggings, ItemSlot.Leggings);
+            InsertIntoList(JsonMaterials.Feet, ItemSlot.Feet);
+            InsertIntoList(JsonMaterials.Collar, ItemSlot.Collar);
+            InsertIntoList(JsonMaterials.HandSingle, ItemSlot.HandSingle);
+            InsertIntoList(JsonMaterials.HandDual, ItemSlot.HandDual);
+        }
+        void InsertIntoList(dynamic materialPart, ItemSlot index)
+        {
+            foreach (var material in materialPart)
             {
                 string itemName = material.itemName;
                 string itemEffect = material.itemEffect.effectText, effectCost = material.itemEffect.effectCost, effectName = material.itemEffect.effectName;
                 bool isEffectPassive = material.itemEffect.isEffectPassive;
                 List<Status> statuses = new List<Status>();
-                ItemSlot itemSlot = (ItemSlot)material.itemSlot;
+                ItemSlot itemSlot = index;
                 ItemQuality itemQuality = (ItemQuality)material.itemQuality;
 
                 for (int i = 0; i < Enum.GetNames(typeof(ItemStatus)).Length; i++)

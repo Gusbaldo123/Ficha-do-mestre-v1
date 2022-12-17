@@ -41,6 +41,13 @@ namespace Ficha_do_Mestre_v1.Screens
             ch_Collar.Checked = true;
             ch_HandSingle.Checked = true;
             ch_HandDual.Checked = true;
+
+            lbl_ItemQnty.Text = $"{MaterialList.materialList.Count} itens registrados";
+            lb_SelectItem.Enabled = false;
+            foreach (var item in MaterialList.materialList)
+            {
+                lb_SelectItem.Items.Add(item.itemName);
+            }
         }
         private void bt_StatusAll_Click(object sender, EventArgs e)
         {
@@ -180,6 +187,10 @@ namespace Ficha_do_Mestre_v1.Screens
                 MessageBox.Show("Não há um item cadastrado com estes filtros", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            FillPanels();
+        }
+        void FillPanels()
+        {
             pnl_GeneratedItem.Enabled = true;
             string txt = generatedItem.itemName;
             switch (generatedItem.itemQuality)
@@ -226,7 +237,7 @@ namespace Ficha_do_Mestre_v1.Screens
                     break;
             }
 
-            lbl_GeneratedItemName.Text = ((generatedItem.itemQuality).ToString())+" "+txt;
+            lbl_GeneratedItemName.Text = ((generatedItem.itemQuality).ToString()) + " " + txt;
 
             string txtEffect = "";
             txtEffect += ((generatedItem.itemQuality).ToString()) + " " + generatedItem.itemName + "(";
@@ -238,14 +249,14 @@ namespace Ficha_do_Mestre_v1.Screens
                 txtEffect += " )";
             }
 
-            txt_GeneratedItemEffect.Text = generatedItem.itemEffect == ""?"Nenhum": txtEffect;
+            txt_GeneratedItemEffect.Text = generatedItem.itemEffect == "" ? "Nenhum" : txtEffect;
             bt_GeneratedItemCopy.Enabled = true;
 
-            string txtC="";
+            string txtC = "";
 
             for (int i = 0; i < Enum.GetNames(typeof(ItemStatus)).Length; i++)
             {
-                txtC += ((ItemStatus)i).ToString() + ": " + Math.Ceiling(generatedItem.statuses[i].percentageGain).ToString()+ Environment.NewLine;
+                txtC += ((ItemStatus)i).ToString() + ": " + Math.Ceiling(generatedItem.statuses[i].percentageGain).ToString() + Environment.NewLine;
             }
 
             lbl_GeneratedItemStatusStr.Text = txtC;
@@ -269,9 +280,11 @@ namespace Ficha_do_Mestre_v1.Screens
                     break;
                 }
             }
-
-
-            int randomLvl = new Random().Next(numExtra, playerLvl + ExtraDir + 1);
+            int randomLvl = playerLvl + ExtraDir + 1;
+            try
+            { randomLvl = new Random().Next(numExtra, playerLvl + ExtraDir + 1); }
+            catch
+            { }
             if (randomLvl <= 0) randomLvl = 1;
             float gainStatus = (float)Math.Ceiling((randomLvl + 1) * (2 + (0.55f * numExtra)));
 
@@ -316,5 +329,48 @@ namespace Ficha_do_Mestre_v1.Screens
             return null;
         }
 
+        private void lb_SelectItem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Material item = MaterialList.materialList[lb_SelectItem.SelectedIndex];
+            int playerLvl = Convert.ToInt32(txt_PlayerLvl.Text);
+            int numExtra = playerLvl - ExtraDir;
+
+            for (int i = 0; i < ExtraDir; i++)
+            {
+                if (playerLvl - i < 0)
+                {
+                    numExtra = playerLvl - i + 1;
+                    break;
+                }
+            }
+
+
+            int randomLvl = playerLvl + ExtraDir + 1;
+            if (randomLvl <= 0) randomLvl = 1;
+            float gainStatus = (float)Math.Ceiling((randomLvl + 1) * (2 + (0.55f * numExtra)));
+
+            List<Status> statuses = new List<Status>();
+
+            foreach (Status status in item.statuses)
+                statuses.Add(new Status((int)(gainStatus * status.percentageGain), status.itemStatus));
+
+            generatedItem = new Material($"{item.itemName} Lvl" + playerLvl, item.isEffectPassive, item.effectCost, item.effectName, item.itemEffect, statuses, item.itemSlot, item.itemQuality);
+            FillPanels();
+        }
+
+        private void txt_PlayerLvl_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int playerLvl = Convert.ToInt32(txt_PlayerLvl.Text);
+                lb_SelectItem.Enabled = true;
+                bt_GenerateItem.Enabled = true;
+            }
+            catch
+            {
+                lb_SelectItem.Enabled = false;
+                bt_GenerateItem.Enabled = false;
+            }
+        }
     }
 }
