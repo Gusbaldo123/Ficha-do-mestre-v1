@@ -1,26 +1,6 @@
 ﻿{
 	"Head":[
 		{
-			"itemName":"AAAAAAAAAAAAAAAA",
-			"itemEffect":{
-				"isEffectPassive":false,
-				"effectCost":"",
-				"effectName":"",
-				"effectText":""
-			},
-			"statuses":[
-				{
-					"percentageGain":0.3,
-					"itemStatus":4
-				},
-				{
-					"percentageGain":0.1,
-					"itemStatus":5
-				}
-			],
-			"itemQuality":0
-		},
-		{
 			"itemName":"Bronze Helmet",
 			"itemEffect":{
 				"isEffectPassive":false,
