@@ -43,6 +43,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -103,7 +104,6 @@
     <EmbeddedResource Include="Screens\XpCalc.resx">
       <DependentUpon>XpCalc.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Informations\MaterialList.json" />
     <None Include="Informations\NPCOption.json" />
     <None Include="Informations\Quenya.json" />
     <None Include="packages.config" />

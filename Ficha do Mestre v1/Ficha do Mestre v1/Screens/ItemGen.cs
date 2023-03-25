@@ -12,7 +12,7 @@ namespace Ficha_do_Mestre_v1.Screens
     {
         bool[] listStatuses = new bool[8];
 
-        MaterialList MaterialList = new MaterialList();
+        MaterialList MaterialList;
         Material generatedItem;
 
         int ExtraDir = 4;
@@ -23,6 +23,7 @@ namespace Ficha_do_Mestre_v1.Screens
         }
         private void ItemGen_Load(object sender, EventArgs e)
         {
+            MaterialList = new MaterialList();
             cb_Quality.SelectedIndex = (int)ItemQuality.Common;
 
             chb_Str.Checked = true;
@@ -42,12 +43,13 @@ namespace Ficha_do_Mestre_v1.Screens
             ch_HandSingle.Checked = true;
             ch_HandDual.Checked = true;
 
-            lbl_ItemQnty.Text = $"{MaterialList.materialList.Count} itens registrados";
+            
             lb_SelectItem.Enabled = false;
             foreach (var item in MaterialList.materialList)
             {
                 lb_SelectItem.Items.Add(item.itemName);
             }
+            lbl_ItemQnty.Text = $"{lb_SelectItem.Items.Count} itens registrados";
         }
         private void bt_StatusAll_Click(object sender, EventArgs e)
         {
@@ -301,22 +303,19 @@ namespace Ficha_do_Mestre_v1.Screens
 
                 Material item = list[new Random().Next(0, list.Count)];
 
-                bool canProceed = true;
+                //bool canProceed = true;
 
-                foreach (Status selStatus in item.statuses)
+                int founds = 0;
+
+                for (int i = 0; i < enabledStatuses.Length; i++)
                 {
-                    if (selStatus.percentageGain <= 0) continue;
-                    if (selStatus.itemStatus == (ItemStatus)0 && !enabledStatuses[0]) canProceed = false;
-                    if (selStatus.itemStatus == (ItemStatus)1 && !enabledStatuses[1]) canProceed = false;
-                    if (selStatus.itemStatus == (ItemStatus)2 && !enabledStatuses[2]) canProceed = false;
-                    if (selStatus.itemStatus == (ItemStatus)3 && !enabledStatuses[3]) canProceed = false;
-                    if (selStatus.itemStatus == (ItemStatus)4 && !enabledStatuses[4]) canProceed = false;
-                    if (selStatus.itemStatus == (ItemStatus)5 && !enabledStatuses[5]) canProceed = false;
-                    if (selStatus.itemStatus == (ItemStatus)6 && !enabledStatuses[6]) canProceed = false;
-                    if (selStatus.itemStatus == (ItemStatus)7 && !enabledStatuses[7]) canProceed = false;
+                    var sla1 = enabledStatuses[i];
+                    var sla2 = item.statuses[i].percentageGain;
+                    if (enabledStatuses[i] && item.statuses[i].percentageGain > 0)
+                        founds++;
                 }
-                if(!enabledSlots.Contains((int)item.itemSlot)) canProceed = false;
-                if (!canProceed) continue;
+                //if(!enabledSlots.Contains((int)item.itemSlot)) canProceed = false;
+                if (founds<=0) continue;
 
                 List<Status> statuses = new List<Status>();
 
@@ -331,7 +330,10 @@ namespace Ficha_do_Mestre_v1.Screens
 
         private void lb_SelectItem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Material item = MaterialList.materialList[lb_SelectItem.SelectedIndex];
+            Material item = new Material("", false, null, null, null, null, ItemSlot.Collar, ItemQuality.Common);
+
+            try { item = MaterialList.materialList[lb_SelectItem.SelectedIndex]; } catch { return; }
+
             int playerLvl = Convert.ToInt32(txt_PlayerLvl.Text);
             int numExtra = playerLvl - ExtraDir;
 
@@ -343,7 +345,6 @@ namespace Ficha_do_Mestre_v1.Screens
                     break;
                 }
             }
-
 
             int randomLvl = playerLvl + ExtraDir + 1;
             if (randomLvl <= 0) randomLvl = 1;
@@ -371,6 +372,18 @@ namespace Ficha_do_Mestre_v1.Screens
                 lb_SelectItem.Enabled = false;
                 bt_GenerateItem.Enabled = false;
             }
+        }
+
+        private void txtboxItemFilter_TextChanged(object sender, EventArgs e)
+        {
+            lb_SelectItem.Items.Clear();
+            foreach (var item in MaterialList.materialList)
+            {
+                string nameLower = item.itemName.ToLower();
+                if(nameLower.Contains(txtboxItemFilter.Text.ToLower()))
+                    lb_SelectItem.Items.Add(item.itemName);
+            }
+            lbl_ItemQnty.Text = $"{lb_SelectItem.Items.Count} itens registrados";
         }
     }
 }

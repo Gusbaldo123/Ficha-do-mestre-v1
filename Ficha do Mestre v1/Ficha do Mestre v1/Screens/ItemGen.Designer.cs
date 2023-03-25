@@ -71,6 +71,7 @@
             this.ch_HandDual = new System.Windows.Forms.CheckBox();
             this.lb_SelectItem = new System.Windows.Forms.ListBox();
             this.lbl_ItemQnty = new System.Windows.Forms.Label();
+            this.txtboxItemFilter = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bt_Head)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_Torso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_HandSingle)).BeginInit();
@@ -512,11 +513,20 @@
             this.lbl_ItemQnty.TabIndex = 43;
             this.lbl_ItemQnty.Text = "Qualidade do Item";
             // 
+            // txtboxItemFilter
+            // 
+            this.txtboxItemFilter.Location = new System.Drawing.Point(511, 149);
+            this.txtboxItemFilter.Name = "txtboxItemFilter";
+            this.txtboxItemFilter.Size = new System.Drawing.Size(104, 20);
+            this.txtboxItemFilter.TabIndex = 44;
+            this.txtboxItemFilter.TextChanged += new System.EventHandler(this.txtboxItemFilter_TextChanged);
+            // 
             // ItemGen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 347);
+            this.Controls.Add(this.txtboxItemFilter);
             this.Controls.Add(this.lbl_ItemQnty);
             this.Controls.Add(this.lb_SelectItem);
             this.Controls.Add(this.ch_HandDual);
@@ -611,5 +621,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lb_SelectItem;
         private System.Windows.Forms.Label lbl_ItemQnty;
+        private System.Windows.Forms.TextBox txtboxItemFilter;
     }
 }
